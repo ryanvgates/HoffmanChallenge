@@ -9,7 +9,7 @@ namespace FileCreator
         public static void Main(string[] args)
         {
             int numberOfGuids;
-            int.TryParse(args.FirstOrDefault() ?? "1", out numberOfGuids);
+            int.TryParse(args.FirstOrDefault() ?? "10", out numberOfGuids);
             using (StreamWriter file = new StreamWriter(File.Create("file.txt")))
             {
                 for (var i = 0; i < numberOfGuids; i++)
